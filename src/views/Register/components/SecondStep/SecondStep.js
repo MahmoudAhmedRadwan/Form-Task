@@ -11,9 +11,8 @@ const SecondStep = () => {
     const { register, control, handleSubmit, formState } = form;
     const {errors} = formState
 
+    // submit form and store data in the context
     const onSubmit = (data) => {
-        console.log('sub',data)
-
         setUserData({...userData, 
             'company_name':data.company_name,
             'company_address':data.company_address,
@@ -23,6 +22,8 @@ const SecondStep = () => {
             'company_phone':data.company_phone,
             'company_extra_data_phone':data.company_extra_data_phone
         })
+
+        // change the step in the context to move to the next form
         setStep(3)
     }
     

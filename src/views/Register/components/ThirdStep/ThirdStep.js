@@ -11,8 +11,7 @@ const ThirdStep = () => {
 
     // Function to handle file upload
     const handleFileUpload = (event) => {
-        const file = event.target.files[0]; // Get the uploaded file
-        
+        const file = event.target.files[0];
         if (file) {
             // Check if the file size is less than 500 KB
             if (file.size <= 500 * 1024) {
@@ -20,9 +19,9 @@ const ThirdStep = () => {
                 reader.onload = () => {
                     
                     setUserData({...userData, 'img_show' : reader.result, 'company_avatar' : event.target.files[0]})
-                    setUploadedImage(reader.result); // Set the uploaded image
+                    setUploadedImage(reader.result);
                 };
-                reader.readAsDataURL(file); // Read the file as a data URL
+                reader.readAsDataURL(file);
             } else {
                 alert("File size must be less than 500 KB.");
             }
@@ -30,8 +29,9 @@ const ThirdStep = () => {
     };
 
     useEffect(()=> {
+        // get the image when i get back to the form
         if(userData.img_show){
-            setUploadedImage(userData.img_show); // Set the uploaded image
+            setUploadedImage(userData.img_show);
         }
     }, [])
 
@@ -46,7 +46,7 @@ const ThirdStep = () => {
                             type="file"
                             className="file-input"
                             accept="image/*" // Accept only image files
-                            onChange={handleFileUpload} // Handle the file upload
+                            onChange={handleFileUpload}
                         />
                     </div>
                     <div className="add-icon"></div>

@@ -3,7 +3,8 @@ import success from "../../../../assets/images/confirm.png"
 
 const Final = () => {
     return(
-        <div className="final">
+        // the final step when the step is 5
+        <div className="final bg-white rounded-md p-4 m-auto">
             <div>
                 <img src={success} alt="success" className="block m-auto" />
             </div>

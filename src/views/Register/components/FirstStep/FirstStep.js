@@ -15,6 +15,7 @@ const FirstStep = () => {
     const { register, control, handleSubmit, formState } = form;
     const {errors} = formState
 
+    // submit form and store data in the context
     const onSubmit = (data) => {
         console.log('sub',data.user_full_name)
 
@@ -26,28 +27,26 @@ const FirstStep = () => {
             'user_password':data.user_password,
             'user_password_confirmation':data.user_password_confirmation,
         })
+        // change the step in the context to move to the next form
         setStep(2)
     }
 
+    // show and hidden password functions
   const handleClickShowPassword = () => setShowPassword((show) => !show);
-
   const handleMouseDownPassword = (event) => {
     event.preventDefault();
   };
-
   const handleMouseUpPassword = (event) => {
     event.preventDefault();
   };
-
   const handleClickShowReapeatedPassword = () => setShowReapeatedPassword((show) => !show);
-
   const handleMouseDownReapeatedPassword = (event) => {
     event.preventDefault();
   };
-
   const handleMouseUpReapeatedPassword = (event) => {
     event.preventDefault();
   };
+
     return(
         <div>
             <form onSubmit={handleSubmit(onSubmit)} noValidate>

@@ -64,7 +64,8 @@ body{
 }
 .input_container input,
 .input_container select,
-div#user_nationality{
+div#user_nationality,
+div#demo-simple-select{
     width: 100%;
     border: 1px solid #DDD;
     display: block;
@@ -119,12 +120,6 @@ div#user_nationality{
   font-weight: 600;
   color: #324356;
 }
-
-
-
-
-
-
 
 .file-input-wrapper {
   position: relative;
@@ -195,7 +190,6 @@ div#user_nationality{
 .confirmation-message p:first-child{
   color: #ff4f5e;
 }
-
 
 .final h3{
   font-size: 24px;
