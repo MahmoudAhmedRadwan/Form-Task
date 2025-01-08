@@ -13,8 +13,41 @@ body{
 .form-title p{
   color: #324356;
 }
+.errorValidatoin{
+  color: red;
+  font-size: 16px;
+}
+.input_validation{
+  border: 1px solid red !important;
+}
 
-
+.steps{
+  width: 700px;
+  margin: 100px auto auto auto;
+}
+.step{
+  width: 60px;
+  height: 60px;
+  z-index: 2;
+}
+.step_line{
+  width: calc(100% / 3 - 60px);
+  height: 30px;
+  margin: 0 -10px 0 -10px;
+  border-top: 10px solid #FFF;
+  border-bottom: 10px solid #FFF;
+}
+.active-step{
+  border: 2px solid #FF5F59;
+  color: #FF5F59;
+}
+.success-step{
+  border: 2px solid #1777FB;
+  color: #1777FB;
+}
+.success-step-line{
+  background-color:  #1777FB;
+}
 
 .form-steps-body{
   width: 900px;
@@ -30,11 +63,27 @@ body{
   width: 48%;
 }
 .input_container input,
-.input_container select{
+.input_container select,
+div#user_nationality{
     width: 100%;
     border: 1px solid #DDD;
     display: block;
-    padding: 35px 10px 10px 10px;
+    padding: 35px 10px 10px 10px !important;
+}
+
+.phone .phone_container > div:first-child{
+  width: 20%;
+}
+.phone .phone_container > div:first-child input{
+  padding: 22.5px 10px !important;
+  text-align: center;
+}
+.company_name .phone_container > div:last-child{
+  width: 20%;
+}
+.company_name .phone_container > div:last-child input{
+  padding: 22.5px 10px !important;
+  text-align: center;
 }
 .input_container input::placeholder,
 .input_container select{
@@ -51,7 +100,9 @@ body{
 .input_container .MuiFormControl-root{
   width: 100%;
 }
-
+.phone label{
+  left: 20%;
+}
 .form_actions .next-btn{
   width: 300px;
   background-color: #1777FB;
@@ -136,8 +187,38 @@ body{
   line-height: 1;
 }
 
+.confirmation-message p{
+  font-size: 24px;
+  font-weight: 600;
+  color: #324356;
+}
+.confirmation-message p:first-child{
+  color: #ff4f5e;
+}
 
 
+.final h3{
+  font-size: 24px;
+  color: #324356;
+  font-weight: 600;
+}
+.final p{
+  font-size: 22px;
+  color: #324356;
+  font-weight: 500;
+}
+.final span{
+  color: #ff4f5e;
+}
 
-
-
+@media(max-width: 1100px){
+  .form-steps-body{
+    width: 100%;
+  }
+}
+@media(max-width: 991px){
+  .steps,
+  .half-width {
+    width: 100%;
+  }
+}
