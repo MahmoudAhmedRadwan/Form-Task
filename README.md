@@ -68,3 +68,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+i created the react project and installed react form hook library and installed tailwing and matrial ui
+i used tailwind for style 
+matrial for components
+
+i used context to manage data between components
+userData for collecting the data from all inputs
+step for change the form step by step
+
+i made the post request in the confirmation page
+
+i used the react form hook to validate all inputs

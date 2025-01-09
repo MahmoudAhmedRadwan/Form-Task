@@ -9,6 +9,7 @@ const Comfirmation = () => {
 
     const submit = async () => {
         console.log(userData, 'testttt')
+       
         setLoading(true)
         try {
             const formData = new FormData();
@@ -26,10 +27,9 @@ const Comfirmation = () => {
             formData.append('user_full_name', userData.user_full_name);
             formData.append('user_phone', userData.user_phone);
             formData.append('user_nationality', userData.user_nationality);
-    
+
             const response = await axios.post('https://id.safav2.io.safavisa.com/register', formData, {
                 headers: {
-                    'Content-Type': 'application/json',
                     'Access-Control-Allow-Origin': '*',
                     'Access-Control-Allow-Headers': '*',
                 },
@@ -37,6 +37,8 @@ const Comfirmation = () => {
     
             // Handle success
             console.log("Response Data:", response.data);
+
+            // if the request is success move to the next page by set the step to number 5
             setStep(5)
             setLoading(false)
         } catch (error) {

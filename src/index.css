@@ -215,4 +215,7 @@ div#demo-simple-select{
   .half-width {
     width: 100%;
   }
+  .form_actions .next-btn{
+    width: 100px;
+  }
 }
