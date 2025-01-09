@@ -8,8 +8,6 @@ const Comfirmation = () => {
     const [loading, setLoading] = useState(false)
 
     const submit = async () => {
-        console.log(userData, 'testttt')
-       
         setLoading(true)
         try {
             const formData = new FormData();
@@ -34,8 +32,6 @@ const Comfirmation = () => {
                     'Access-Control-Allow-Headers': '*',
                 },
             });
-    
-            // Handle success
             console.log("Response Data:", response.data);
 
             // if the request is success move to the next page by set the step to number 5
@@ -48,8 +44,6 @@ const Comfirmation = () => {
             alert("Failed to submit form. Please try again.");
         }
     };
-    
-
     
     return(
         <div>
